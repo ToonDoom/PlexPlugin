@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Devices>
+	<Device type="custom" id="plexClient">
+		<Name>Plex Client</Name>
+		<ConfigUI>
+            <Field id="clientId" type="menu">
+                <Label>Plex client Machine Identifier:</Label>
+                <List class="self" method="clientListGenerator"/>
+            </Field>
+		</ConfigUI>
+		<States>
+			<State id="mode">
+                <ValueType>
+                    <List>
+                        <Option value="server_offline">Server Off Line</Option>
+                        <Option value="client_offline">Client Off Line</Option>
+                        <Option value="playing">Playing</Option>
+                        <Option value="paused">Paused</Option>
+                    </List>
+                </ValueType>
+                <TriggerLabel>Mode Changed</TriggerLabel>
+                <TriggerLabelPrefix>Mode Changed to</TriggerLabelPrefix>
+                <ControlPageLabel>Current Mode</ControlPageLabel>
+                <ControlPageLabelPrefix>Mode is</ControlPageLabelPrefix>
+            </State>
+        </States>
+        <UiDisplayStateId>mode</UiDisplayStateId>
+	</Device>
+</Devices>

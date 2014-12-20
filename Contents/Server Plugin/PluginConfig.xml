@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<PluginConfig>
+	<SupportURL></SupportURL>
+	<Field id="title" type="label" alignText="center" fontColor="blue">
+		<Label>Plex Media Server Configuration</Label>
+	</Field>
+	<Field id="address" type="textfield" defaultValue="">
+		<Label>IP Address:</Label>
+	</Field>
+	<Field id="labelAddress" type="label" alignWithControl="true" fontColor="darkgray" fontSize="small">
+		<Label>IP address of Plex Media Server (e.g. 192.168.0.6)</Label>
+	</Field>
+	<Field id="port" type="textfield" defaultValue="32400">
+		<Label>port:</Label>
+	</Field>
+    <Field id="showDebugInfo" type="checkbox">
+        <Label>Enable debugging:</Label>
+    </Field>
+</PluginConfig>
