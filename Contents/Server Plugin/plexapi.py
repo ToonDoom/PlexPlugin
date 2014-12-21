@@ -27,7 +27,10 @@ class PlexApi():
     def callPlex(self, path):
         plexUrl = "%s:%s" % (self.server, self.port)
         request = urllib2.Request(("http://%s" + path) % plexUrl, "")
-        result = urllib2.urlopen(request, timeout=3)
+
+        # Need to find python 2.5 way to enforce timeout
+        # result = urllib2.urlopen(request, timeout=3)
+        result = urllib2.urlopen(request)
 
         return result.read()
 
