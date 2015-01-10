@@ -34,9 +34,9 @@ class Plugin(indigo.PluginBase):
             address = valuesDict.get(u"address")
             port = valuesDict.get(u"port")
             self.debugLog(u"Plex Server " + address + ":" + port)
-            self.plexApi = PlexApi(self, address, port)
+            self.plexApi = PlexApi(address, port)
 
-########################################
+#######################################
     def clientListGenerator(self, filter="", valuesDict=None, typeId="", targetId=0):
         return self.plexApi.getClientMachineIds()
 
